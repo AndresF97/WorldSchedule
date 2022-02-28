@@ -31,7 +31,7 @@ class Landing extends Component{
         })
     }
     getTime = (city, continent)=>{
-        console.log(moment().tz(`${continent}/${city}`).format('ha z'))
+        console.log(moment().tz(`${continent}/${city}`).format('h:mma z'))
         console.log("Moments Returned")
     }
     render(){
