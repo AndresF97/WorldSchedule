@@ -1,11 +1,12 @@
 import React, { Component } from "react"
 import NavbarLanding from "../components/Navbar"
-import {Button, FormControl, InputGroup} from "react-bootstrap"
+import {Button, FormControl, InputGroup,Dropdown,DropdownButton} from "react-bootstrap"
 import moment from "moment-timezone"
 
 class Landing extends Component{
     state   = {
         currentCity:"",
+        currentCountry:"",
         cityLivedIn:[],
         cityToSendWork:[]
 
@@ -40,6 +41,18 @@ class Landing extends Component{
                 onKeyDown={this.searchCityEnter}
                 onChange={this.handleInputChange}
                 />
+                <DropdownButton
+                variant="outline-secondary"
+                title="Dropdown"
+                id="input-group-dropdown-1"
+                >
+                    <Dropdown.Item href="#">America</Dropdown.Item>
+                    <Dropdown.Item href="#">Europe</Dropdown.Item>
+                    <Dropdown.Item href="#">Africa</Dropdown.Item>
+                    <Dropdown.Item href="#">Asia</Dropdown.Item>
+                    <Dropdown.Item href="#">Indian</Dropdown.Item>
+                    <Dropdown.Item href="#">Australia</Dropdown.Item>
+                </DropdownButton>
                 <Button variant="outline-secondary" id="button-addon2" onClick={this.searchCitySearchButton}>
                 Search
                 </Button>
