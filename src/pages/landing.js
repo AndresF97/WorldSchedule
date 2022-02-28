@@ -13,7 +13,8 @@ class Landing extends Component{
     }
     searchCitySearchButton = (event) =>{
         event.preventDefault()
-        console.log(this.state.currentCity)
+        //console.log(this.state.currentCity)
+        //console.log(this.state.currentContinent)
         this.getTime(this.state.currentCity,this.state.currentContinent)
 
     }
@@ -31,7 +32,7 @@ class Landing extends Component{
     }
     getTime = (city, continent)=>{
         console.log(moment().tz(`${continent}/${city}`).format('ha z'))
-        console.log("hel")
+        console.log("Moments Returned")
     }
     render(){
         return(
@@ -47,7 +48,13 @@ class Landing extends Component{
                     onKeyDown={this.searchCityEnter}
                     onChange={this.handleInputChange}
                     />
-                    <Form.Select aria-label="Select Continent" size="sm">
+                    <Form.Select 
+                    aria-label="Select Continent" 
+                    size="sm"
+                    onChange={this.handleInputChange}
+                    value={this.state.currentContinent}
+                    name="currentContinent"
+                    >
                         <option>Select Continent</option>
                         <option value="America">America</option>
                         <option value="Europe">Europe</option>
