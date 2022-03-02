@@ -5,11 +5,23 @@ import moment from "moment-timezone"
 
 class Landing extends Component{
     state   = {
+        currenTime: "",
         currentCity:"",
         currentContinent:"",
         cityLivedIn:[],
         cityToSendWork:[]
 
+    }
+    componentDidMount(){
+        console.log("Component mounted")
+        this.getCurrentTime()
+    }
+    getCurrentTime = () =>{
+        this.setInterval(function () {
+            console.log("timed")
+            //this.setState({ currenTime : moment().format('H:mm:ss')})
+        }, 1000);
+        //this.setState({ currenTime : moment().format('hh:mm:ss')})
     }
     searchCitySearchButton = (event) =>{
         event.preventDefault()
@@ -38,6 +50,7 @@ class Landing extends Component{
         return(
         <div>
             <NavbarLanding/>
+            <h1 name="currentTime">{this.state.currenTime} time</h1>
             <Row className="d-flex justify-content-center pt-3">
                 <Col sm={6}>
                 <InputGroup className="mb-5" >
