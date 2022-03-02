@@ -14,14 +14,11 @@ class Landing extends Component{
     }
     componentDidMount(){
         console.log("Component mounted")
-        this.getCurrentTime()
+        //this.getCurrentTime()
+        const settingInt = setInterval(() => this.getCurrentTime(), 1000)
     }
     getCurrentTime = () =>{
-        this.setInterval(function () {
-            console.log("timed")
-            //this.setState({ currenTime : moment().format('H:mm:ss')})
-        }, 1000);
-        //this.setState({ currenTime : moment().format('hh:mm:ss')})
+        this.setState({ currenTime : moment().format('h:mm:ss a')})
     }
     searchCitySearchButton = (event) =>{
         event.preventDefault()
@@ -50,7 +47,9 @@ class Landing extends Component{
         return(
         <div>
             <NavbarLanding/>
-            <h1 name="currentTime">{this.state.currenTime} time</h1>
+            <div className="text-center">
+            <h1 name="currentTime">Your Current Time: {this.state.currenTime}</h1>
+            </div>
             <Row className="d-flex justify-content-center pt-3">
                 <Col sm={6}>
                 <InputGroup className="mb-5" >
