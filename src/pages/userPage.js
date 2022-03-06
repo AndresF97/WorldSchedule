@@ -3,7 +3,7 @@ import NavbarLanding from "../components/Navbar"
 import {Button, FormControl, InputGroup,Form,Row, Col} from "react-bootstrap"
 import moment from "moment-timezone"
 
-class Landing extends Component{
+class UserPage extends Component{
     state   = {
         currenTime: "",
         currentCity:"",
@@ -85,4 +85,4 @@ class Landing extends Component{
 }
 
 
-export default Landing;
+export default UserPage;
