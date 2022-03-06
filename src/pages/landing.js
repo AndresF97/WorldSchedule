@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import NavbarLanding from "../components/Navbar"
 import {Button, FormControl, InputGroup,Form,Row, Col} from "react-bootstrap"
 import moment from "moment-timezone"
 
@@ -43,7 +42,6 @@ class Landing extends Component{
     render(){
         return(
         <div>
-            <NavbarLanding/>
             <div className="text-center pt-4">
             <h1 name="currentTime">Your Current Time: {this.state.currenTime}</h1>
             </div>

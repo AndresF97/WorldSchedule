@@ -12,6 +12,8 @@ function landingNavbar(){
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/User">User Page</Nav.Link>
+                    <Nav.Link href="/Project">Project Page</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>

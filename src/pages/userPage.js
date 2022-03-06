@@ -43,7 +43,7 @@ class UserPage extends Component{
     render(){
         return(
         <div>
-            <NavbarLanding/>
+            <h1>User Page</h1>
             <div className="text-center pt-4">
             <h1 name="currentTime">Your Current Time: {this.state.currenTime}</h1>
             </div>
