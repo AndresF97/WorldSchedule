@@ -1,0 +1,16 @@
+button#addButton{
+    background-color: white; /* Green */
+    border: 2px solid black;
+    margin-left: 5px;
+    color: black;
+    padding: 5px 20px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    outline: 24px;
+}
+button#addButton:active{
+    background-color: #F8F8F8;
+}

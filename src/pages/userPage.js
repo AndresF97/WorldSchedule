@@ -1,9 +1,11 @@
 import React, { Component } from "react"
-import NavbarLanding from "../components/Navbar"
-import {Button, FormControl, InputGroup,Form,Row, Col} from "react-bootstrap"
+import AddProjectButton from "../components/addProjectButton"
+import {Button, FormControl, InputGroup,Form,Row, Col, Accordion} from "react-bootstrap"
 import moment from "moment-timezone"
 
 class UserPage extends Component{
+
+    // Making local state 
     state   = {
         currenTime: "",
         currentCity:"",
@@ -12,10 +14,12 @@ class UserPage extends Component{
         cityToSendWork:[]
 
     }
+    // Makeing componenetmount this will make any function run as soon page is loaded
     componentDidMount(){
         console.log("Component mounted")
         setInterval(() => this.getCurrentTime(), 1000)
     }
+    //gets current for the state
     getCurrentTime = () =>{
         this.setState({ currenTime : moment().format('h:mm:ss a')})
     }
@@ -44,6 +48,8 @@ class UserPage extends Component{
         return(
         <div>
             <h1>User Page</h1>
+
+            {/* Away to search for city and time */}
             <div className="text-center pt-4">
             <h1 name="currentTime">Your Current Time: {this.state.currenTime}</h1>
             </div>
@@ -78,7 +84,54 @@ class UserPage extends Component{
                 </InputGroup>
                 </Col>
             </Row>
+            {/* END OF GETTING TIME ELEMENT */}
 
+
+            {/* START OF COUTRY CARD HOLDER */}
+            <Row>
+                <Col sm={1}>
+                    {/* START OF ADD BUTTON ELEMENT */}
+                    <AddProjectButton/>
+                    {/* END OF ADD BUTTON ELEMENT */}
+                </Col>
+                <Col sm>
+                    <Accordion defaultActiveKey="0">
+                        <Accordion.Item eventKey="0">
+                            <Accordion.Header>COUNTRY NAME FLAG</Accordion.Header>
+                            <Accordion.Body>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                </Col>
+                <Col sm>
+                    <Accordion defaultActiveKey="0">
+                        <Accordion.Item eventKey="0">
+                            <Accordion.Header>COUNTRY NAME FLAG</Accordion.Header>
+                            <Accordion.Body>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                </Col>
+                <Col sm>
+                    <Accordion defaultActiveKey="0">
+                        <Accordion.Item eventKey="0">
+                            <Accordion.Header>COUNTRY NAME FLAG</Accordion.Header>
+                            <Accordion.Body>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                </Col>
+                <Col sm>
+                    <Accordion defaultActiveKey="0">
+                        <Accordion.Item eventKey="0">
+                            <Accordion.Header>COUNTRY NAME FLAG</Accordion.Header>
+                            <Accordion.Body>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                </Col>
+            </Row>
+             {/* END OF COUTRY CARD HOLDER */}
         </div>
         )
     }
