@@ -1,9 +1,10 @@
-img{
-    width: 100%;
-    height:400px;
-    border-radius: 50%;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+#mainParallaxImg{
+    background-image: url("https://i.pinimg.com/originals/76/94/ed/7694ed4d162b76fbaee9e7725ac77d02.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    width:100%;
+    height: 100vh;
+    display: block;
+
+};
