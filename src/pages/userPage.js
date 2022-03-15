@@ -40,6 +40,10 @@ class UserPage extends Component{
         event.preventDefault()
         console.log("add project clicked")
         this.setState({show: true})
+        if(this.state.show){
+            this.setState({show:false})
+        }
+
     }
     handleInputChange = event =>{
         const {name,value} = event.target;
