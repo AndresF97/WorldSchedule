@@ -2,13 +2,15 @@ button#projectName{
     transition-duration: 0.4s;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 80px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 8px;
+    margin-bottom: 6px;
 }
 button#projectName:hover{
-    background-color: #4CAF50;
-    color: white;
+    background-color: #d9d9d9;
+    color: black;
 }

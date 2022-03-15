@@ -12,7 +12,8 @@ class UserPage extends Component{
         currentCity:"",
         currentContinent:"",
         cityLivedIn:[],
-        cityToSendWork:[]
+        cityToSendWork:[],
+        show:false
 
     }
     // Makeing componenetmount this will make any function run as soon page is loaded
@@ -34,6 +35,11 @@ class UserPage extends Component{
             console.log("Enter pressed")
             this.getTime(this.state.currentCity,this.state.currentContinent)
         }
+    }
+    addProjectsButton = (event) =>{
+        event.preventDefault()
+        console.log("add project clicked")
+        this.setState({show: true})
     }
     handleInputChange = event =>{
         const {name,value} = event.target;
@@ -57,7 +63,7 @@ class UserPage extends Component{
             <Row>
                 <Col sm={1}>
                     {/* START OF ADD BUTTON ELEMENT */}
-                    <AddProjectButton/>
+                    <AddProjectButton showFunction = {this.addProjectsButton}/>
                     {/* END OF ADD BUTTON ELEMENT */}
                 </Col>
                 <Col sm>
@@ -102,6 +108,7 @@ class UserPage extends Component{
             </Row>
              {/* END OF COUTRY CARD HOLDER */}
             {/* Away to search for city and time */}
+            {this.state.show ?
             <Row className="d-flex justify-content-center pt-3">
                 <Col sm={6}>
                 <Form.Label htmlFor="basic-url">Add your time and project name:</Form.Label>
@@ -139,7 +146,10 @@ class UserPage extends Component{
                     </Button>
                 </InputGroup>
                 </Col>
-            </Row>
+            </Row> :
+            <>
+            </>
+            }
             {/* END OF GETTING TIME ELEMENT */}
         </div>
         )

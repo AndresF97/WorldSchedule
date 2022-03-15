@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
 
-function AddProjectButton(){
+function AddProjectButton(props){
     return(
         <div>
-            <button id="addButton">
+            <button id="addButton" onClick={props.showFunction}>
                 +
             </button>
             {/* AS SOON AS THE BUTTON IS CLICKED IT SHOULD DISPLAY THE TIME SELECTION AND PORJECT NAME */}
