@@ -4,6 +4,7 @@ import Landing from './pages/landing';
 import UserPage from './pages/userPage';
 import ProjectsPage from './pages/projectsPage';
 import Navbar from './components/Navbar';
+import Footer from "./components/footer"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 
@@ -18,6 +19,7 @@ function App() {
               <Route exact path="/Project" element={<ProjectsPage/>}/>
             </Routes>
         </Router>
+    <Footer/>
     </>
     
   );

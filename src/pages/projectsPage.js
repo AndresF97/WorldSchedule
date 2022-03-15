@@ -7,6 +7,7 @@ class projectsPage extends Component{
         return(
         <div>
             <h1>Porject pages</h1>
+  
         </div>
         )
     }
