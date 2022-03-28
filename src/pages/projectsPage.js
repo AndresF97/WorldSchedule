@@ -35,7 +35,7 @@ class projectsPage extends Component{
     render(){
         return(
         <div>
-            <h1 className="text-center">Porject pages</h1>
+            <h1 className="text-center">Single Porject page</h1>
             <h3 className="text-center">Your current time: {this.state.currentTime}</h3>
             <h3 className="text-center">{this.state.projectName}</h3>
             <ProgressBar style={{width:'50%',display:'block',marginLeft:'auto',marginRight:'auto',textAlign:"center"}}animated now={this.state.currentProgress} label={`${this.state.currentProgress}%`} />
