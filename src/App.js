@@ -1,4 +1,4 @@
-import React from 'react';
+import {React} from 'react';
 import './App.css';
 import Landing from './pages/landing';
 import UserPage from './pages/userPage';

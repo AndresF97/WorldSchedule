@@ -1,8 +1,10 @@
-import React from "react"
+import React  from "react"
+import SignInBox from "../signIn";
+import SignUpBox from "../signUp"
 import {Navbar,Container,Nav} from "react-bootstrap"
 
 
-function landingNavbar(){
+function LandingNavbar(){
     return(
         <>
         {/* Make props to make our sign in and sign up toggle, using an if statement */}
@@ -17,8 +19,8 @@ function landingNavbar(){
                     <Nav.Link href="/Project">Project Page</Nav.Link>
                 </Nav>
                 <Nav>
-                    <Nav.Link href="/">Sign In</Nav.Link>
-                    <Nav.Link href="/">Sign Up</Nav.Link>
+                    <SignInBox/>
+                    <SignUpBox/>
                  </Nav>
                 </Navbar.Collapse>
             </Container>
@@ -27,4 +29,4 @@ function landingNavbar(){
     )
 }
 
-export default landingNavbar
+export default LandingNavbar;
