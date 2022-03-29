@@ -14,13 +14,22 @@ function SignUpBox(){
         <Modal.Header closeButton>
           <Modal.Title>Sign Up</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+            <form>
+                <label for={"email"}>Email</label>
+                <input type={"text"} name="email"required></input>
+                <label for={"password"}>Password</label>
+                <input type={"text"} name="password"required></input>
+                <label for={"confirmPassword"}>Confirm Password</label>
+                <input type={"text"} name="confirmPassword"required></input>
+            </form>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
           <Button variant="primary" onClick={handleClose}>
-            Save Changes
+            Submit
           </Button>
         </Modal.Footer>
       </Modal>
